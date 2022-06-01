@@ -46,6 +46,12 @@
     {{-- Theme JS --}}
     <script src="{{ asset('js/argon-dashboard.min.js') }}"></script>
 
+    {{-- Sweet Alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {{-- Modal Livewire --}}
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <script>
         // Doughnut chart
         var ctx3 = document.getElementById("doughnut-chart").getContext("2d");
@@ -221,8 +227,11 @@
         });
     </script>
 
-    @yield('js')
+    @livewire('livewire-ui-modal')
+
     @livewireScripts
+
+    @yield('js')
 
 </body>
 

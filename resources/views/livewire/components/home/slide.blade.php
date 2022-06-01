@@ -1,10 +1,11 @@
 <div id="carouselExampleControls" class="carousel slide mt-4" data-bs-ride="carousel">
+    <h3>alo</h3>
     <div class="carousel-inner">
         <div class="carousel-item">
             <div class="page-header min-vh-75 m-3 border-radius-xl"
-                style="background-image: url('https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80');">
-                <span class="mask bg-gradient-dark"></span>
-                <div class="container">
+            style="background-image: url('https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80');">
+            <span class="mask bg-gradient-dark"></span>
+            <div class="container">
                     <div class="row">
                         <div class="col-lg-6 my-auto">
                             <h4 class="text-white mb-0 fadeIn1 fadeInBottom">Pricing Plans</h4>
@@ -12,12 +13,12 @@
                             <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Wealth creation is an
                                 evolutionarily recent positive-sum game. Status is an old zero-sum game.
                                 Those attacking wealth creation are often just seeking status.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container-fluid px-3">
-                <div class="row">
+                <div class="container-fluid px-3">
+                    <div class="row">
                     <div class="col-lg-6">
                         <div class="info-horizontal bg-gradient-primary border-radius-xl p-5">
                             <div class="icon">
