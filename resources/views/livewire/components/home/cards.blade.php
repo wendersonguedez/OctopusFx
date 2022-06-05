@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="col-xl-6 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Receita atual disponivel</p>
+                            <h6 class="text-sm mb-0 text-uppercase font-weight-bold">Receita geral disponivel</h6>
                             <h5 class="font-weight-bolder">
                                 $53,000
                             </h5>
@@ -24,13 +24,13 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+    <div class="col-xl-6 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Valor de todas as despesas</p>
+                            <h6 class="text-sm mb-0 text-uppercase font-weight-bold">Valor de todas as despesas</h6>
                             <h5 class="font-weight-bolder">
                                 2,300
                             </h5>
@@ -49,7 +49,8 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+
+    {{-- <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
@@ -73,8 +74,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-xl-3 col-sm-6">
+    </div> --}}
+
+    {{-- <div class="col-xl-3 col-sm-6">
         <div class="card">
             <div class="card-body p-3">
                 <div class="row">
@@ -98,5 +100,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
