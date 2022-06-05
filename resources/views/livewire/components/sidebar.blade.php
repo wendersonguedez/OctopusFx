@@ -21,40 +21,44 @@
         <hr class="horizontal dark my-1">
 
         <div class="card-body pt-sm-3 pt-0 overflow-auto mt-2">
-            <a href="{{ route('home') }}">
-                <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center" type="button">
-                    <span class="btn-inner--icon"><i class="fa fa-home white-color"></i></span>
-                    <span class="btn-inner--text white-color" style="width: 100%">Página inicial</span>
-                </button>
-            </a>
-
-            <a href="{{ route('receitas') }}">
-                <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center" type="button">
-                    <span class="btn-inner--icon"><i class="fa fa-home white-color"></i></span>
-                    <span class="btn-inner--text white-color" style="width: 100%">Receitas</span>
-                </button>
-            </a>
-
-            <a href="{{ route('despesas') }}">
-                <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center" type="button">
-                    <span class="btn-inner--icon"><i class="fa fa-usd white-color" aria-hidden="true"></i></span>
-                    <span class="btn-inner--text white-color" style="width: 100%">Despesas</span>
-                </button>
-            </a>
-
-            <a href="{{ route('home') }}">
-                <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center" type="button">
-                    <span class="btn-inner--icon"><i class="fa fa-home white-color"></i></span>
-                    <span class="btn-inner--text white-color" style="width: 100%">Falta pagar</span>
-                </button>
-            </a>
-
-            <a href="{{ route('home') }}">
-                <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center" type="button">
-                    <span class="btn-inner--icon"><i class="fa fa-home white-color"></i></span>
-                    <span class="btn-inner--text white-color" style="width: 100%">Desejos</span>
-                </button>
-            </a>
+            <div class="row">
+                <div class="col-12">
+                    <a href="{{ route('home') }}">
+                        <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center"
+                            type="button">
+                            <i class="material-icons white-color f-left" style="opacity: 100%">home_away</i>
+                            <span class="btn-inner--text white-color" style="width: 100%">Página inicial</span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="{{ route('receitas') }}">
+                        <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center"
+                            type="button">
+                            <i class="material-icons white-color f-left" style="opacity: 100%">currency_exchange</i>
+                            <span class="btn-inner--text white-color" style="width: 100%">Receitas</span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="{{ route('despesas') }}">
+                        <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center"
+                            type="button">
+                            <i class="material-icons white-color f-left" style="opacity: 100%">money_off</i>
+                            <span class="btn-inner--text white-color" style="width: 100%">Despesas</span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a href="{{ route('objetivos') }}">
+                        <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center"
+                            type="button">
+                            <i class="material-icons white-color f-left" style="opacity: 100%">currency_exchange</i>
+                            <span class="btn-inner--text white-color" style="width: 100%">Objetivos</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
