@@ -1,5 +1,5 @@
 <div>
-    <div class="min-height-400 bg-primary position-absolute w-100 black-color-gradient"></div>
+    <div class="min-height-200 bg-primary position-absolute w-100 black-color-gradient"></div>
 
     @include('livewire.components.home.sidebar-without-icon')
 
@@ -12,9 +12,9 @@
 
             @include('livewire.components.home.cards')
 
-            @include('livewire.components.graphs.home.index')
+            @include('livewire.components.home.graphs')
 
-            @include('livewire.components.tables.index')
+            @include('livewire.components.home.table')
 
             @include('livewire.components.home.slide')
         </div>
