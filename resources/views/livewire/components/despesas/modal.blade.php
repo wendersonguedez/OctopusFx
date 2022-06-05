@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header bg-danger">
-                <h6 class="modal-title white-color" id="modal-title">NOVA DESPESA</h6>
+                <h6 class="modal-title white-color text-uppercase" id="modal-title">Registrar Despesa</h6>
             </div>
             <div class="modal-body p-2">
                 <div class="card card-plain">
