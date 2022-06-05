@@ -49,6 +49,8 @@
     {{-- Sweet Alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
     {{-- Modal Livewire --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
