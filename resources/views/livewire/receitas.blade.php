@@ -8,8 +8,7 @@
         @include('livewire.components.despesas.navbar')
 
         <div class="container-fluid py-4">
-
-            @include('livewire.components.despesas.nav-bread')
+            @include('livewire.components.receitas.nav-bread')
 
             @include('livewire.components.despesas.filter')
 
