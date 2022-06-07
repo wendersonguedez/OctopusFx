@@ -31,8 +31,9 @@
     {{ $slot }}
 
     {{-- JavaScript Bundle with Popper --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
+    
     {{-- Font Awesome Icons --}}
     <script src="https://kit.fontawesome.com/42d5adcbca.js"></script>
 
@@ -54,17 +55,17 @@
     {{-- Modal Livewire --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <script>
+    {{-- <script>
         // Doughnut chart
         var ctx3 = document.getElementById("doughnut-chart").getContext("2d");
 
         new Chart(ctx3, {
             type: "doughnut",
             data: {
-                labels: ["Creative Tim", "Github", "Bootsnipp", "Dev.to", "Codeinwp"],
+                labels: ["Compras do mês", "Internet", "Energia", "Água", "Roupas"],
                 datasets: [{
-                    label: "Projects",
-                    weight: 9,
+                    label: "Valor",
+                    weight: 20,
                     cutout: 60,
                     tension: 0.9,
                     pointRadius: 2,
@@ -76,8 +77,8 @@
                         "#a8b8d8",
                         "#5e72e4"
                     ],
-                    data: [15, 20, 12, 60, 20],
-                    fill: false
+                    data: [1400, 600, 150, 500, 350],
+                    // fill: false
                 }]
             },
             options: {
@@ -85,7 +86,7 @@
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        display: false
+                        display: true
                     }
                 },
                 interaction: {
@@ -123,52 +124,26 @@
         var ctx1 = document.getElementById("line-chart").getContext("2d");
 
         new Chart(ctx1, {
-            type: "line",
+            type: "bar",
             data: {
                 labels: [
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep",
-                    "Oct",
-                    "Nov",
-                    "Dec"
+                    "Salário",
+                    "Aluguel",
+                    "Emprestimo",
+                    "Frete",
+                    "Empreendimento",
                 ],
                 datasets: [{
-                        label: "Organic Search",
+                        label: "Valor",
                         tension: 0.4,
                         borderWidth: 0,
                         pointRadius: 2,
                         pointBackgroundColor: "#5e72e4",
                         borderColor: "#5e72e4",
                         borderWidth: 3,
-                        data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                        data: [1200, 900, 1100, 400, 2000],
                         maxBarThickness: 6
                     },
-                    {
-                        label: "Referral",
-                        tension: 0.4,
-                        borderWidth: 0,
-                        pointRadius: 2,
-                        pointBackgroundColor: "#3A416F",
-                        borderColor: "#3A416F",
-                        borderWidth: 3,
-                        data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
-                        maxBarThickness: 6
-                    },
-                    {
-                        label: "Direct",
-                        tension: 0.4,
-                        borderWidth: 0,
-                        pointRadius: 2,
-                        pointBackgroundColor: "#17c1e8",
-                        borderColor: "#17c1e8",
-                        borderWidth: 3,
-                        data: [40, 80, 70, 90, 30, 90, 140, 130, 200],
-                        maxBarThickness: 6
-                    }
                 ]
             },
             options: {
@@ -195,7 +170,7 @@
                         ticks: {
                             display: true,
                             padding: 10,
-                            color: "#b2b9bf",
+                            color: "#000",
                             font: {
                                 size: 11,
                                 family: "Open Sans",
@@ -214,12 +189,12 @@
                         },
                         ticks: {
                             display: true,
-                            color: "#b2b9bf",
+                            color: "#000",
                             padding: 10,
                             font: {
-                                size: 11,
+                                size: 13,
                                 family: "Open Sans",
-                                style: "normal",
+                                style: "sans-serif",
                                 lineHeight: 2
                             }
                         }
@@ -227,7 +202,7 @@
                 }
             }
         });
-    </script>
+    </script> --}}
 
     @livewire('livewire-ui-modal')
 
