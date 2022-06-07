@@ -11,13 +11,13 @@
             <div class="col-md-3 col-sm-3 col-6">
                 <div class="form-group">
                     <label for="periodo-inicial" class="form-control-label white-color">Período inicial</label>
-                    <input class="form-control" type="date" value="2018-11-23" id="periodo-inicial">
+                    <input class="form-control" type="date" value="2022-01-01" id="periodo-inicial">
                 </div>
             </div>
             <div class="col-md-3 col-sm-3 col-6">
                 <div class="form-group">
                     <label for="periodo-final" class="form-control-label white-color">Período final</label>
-                    <input class="form-control" type="date" value="2018-11-23" id="periodo-final">
+                    <input class="form-control" type="date" value="2022-01-31" id="periodo-final">
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <div class="fixed-plugin">
-    <a href="#" class="px-3 py-2 d-flex icon-modal" data-bs-toggle="modal" data-bs-target="#despesas">
+    <a href="#" class="px-3 py-2 d-flex icon-modal modal-icon" data-bs-toggle="modal" data-bs-target="#despesas">
         <i class="fa fa-plus fs-4 text-light" aria-hidden="true"></i>
     </a>
 
@@ -26,7 +26,7 @@
                     <a href="{{ route('home') }}">
                         <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center"
                             type="button">
-                            <i class="material-icons white-color f-left" style="opacity: 100%">home_away</i>
+                            <i class="material-icons white-color f-left" style="opacity: 100%">home</i>
                             <span class="btn-inner--text white-color" style="width: 100%">Página inicial</span>
                         </button>
                     </a>
@@ -49,15 +49,15 @@
                         </button>
                     </a>
                 </div>
-                <div class="col-12">
-                    <a href="{{ route('objetivos') }}">
+                {{-- <div class="col-12">
+                    <a href="{{ route('metas') }}">
                         <button class="btn btn-icon btn-3 btn-black-gradient w-100 d-flex justify-content-center"
                             type="button">
                             <i class="material-icons white-color f-left" style="opacity: 100%">currency_exchange</i>
-                            <span class="btn-inner--text white-color" style="width: 100%">Objetivos</span>
+                            <span class="btn-inner--text white-color" style="width: 100%">Metas</span>
                         </button>
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

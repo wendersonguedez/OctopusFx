@@ -2,8 +2,8 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-danger">
-                <h6 class="modal-title white-color text-uppercase" id="modal-title">Registrar Despesa</h6>
+            <div class="modal-header bg-success">
+                <h6 class="modal-title white-color text-uppercase" id="modal-title">Registrar Receita</h6>
             </div>
             <div class="modal-body p-2">
                 <div class="card card-plain">
@@ -36,48 +36,14 @@
                             <div class="form-group">
                                 <label for="formaPagamento"
                                     class="text-center text-uppercase text-default text-xxs font-weight-bolder">
-                                    Receita
+                                    Categoria
                                 </label>
                                 <select class="form-control" id="formaPagamento">
                                     <option value="0">Selecione...</option>
                                     <option value="1">Salário</option>
-                                    <option value="2">Investimento</option>
-                                    <option value="3">Empréstimo</option>
-                                    <option value="4">Aluguel</option>
-                                    <option value="5">Outras</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="categoria"
-                                    class="text-center text-uppercase text-default text-xxs font-weight-bolder">
-                                    Categoria
-                                </label>
-                                <select class="form-control" id="categoria">
-                                    <option value="0">Selecione...</option>
-                                    <option value="1">Casa</option>
-                                    <option value="2">Educação</option>
-                                    <option value="3">Eletrônicos</option>
-                                    <option value="4">Lazer</option>
-                                    <option value="5">Saúde</option>
-                                    <option value="6">Supermercado</option>
-                                    <option value="7">Transporte</option>
-                                    <option value="8">Vestuário</option>
-                                    <option value="9">Viagem</option>
-                                    <option value="10">Outras</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="formaPagamento"
-                                    class="text-center text-uppercase text-default text-xxs font-weight-bolder">Forma de
-                                    pagamento</label>
-                                <select class="form-control" id="formaPagamento">
-                                    <option value="0">Selecione...</option>
-                                    <option value="1">Dinheiro</option>
-                                    <option value="2">Cartão de débito</option>
-                                    <option value="3">Cartão de crédito</option>
-                                    <option value="4">Pix</option>
+                                    <option value="2">Empréstimos</option>
+                                    <option value="3">Investimentos</option>
+                                    <option value="4">Outras</option>
                                 </select>
                             </div>
 
