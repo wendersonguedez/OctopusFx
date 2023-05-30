@@ -2,7 +2,11 @@
     <div class="col-lg-7 mb-lg-0 mb-4">
         <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-sm mb-0 text-uppercase font-weight-bold">Despesas registradas no mês de maio</h6>
+                <h6 class="text-sm mb-0 text-uppercase font-weight-bold">
+                    Despesas registradas no periodo de 
+                    {{ date('d/m/y', strtotime($search['start_date'])) }} -
+                    {{ date('d/m/y', strtotime($search['end_date'])) }}
+                </h6>
                 <p class="text-sm mb-0">
                     <i class="fa fa-arrow-up text-success"></i>
                     <span class="font-weight-bold">4% more</span> in 2021
@@ -19,7 +23,7 @@
     <div class="col-lg-5 mb-lg-0 mb-4">
         <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-sm mb-0 text-uppercase font-weight-bold">Total de despesas por categoria no mês anterior
+                <h6 class="text-sm mb-0 text-uppercase font-weight-bold">Total de despesas por categoria no mês de {{ $mes }}
                 </h6>
                 <p class="text-sm mb-0">
                     <i class="fa fa-arrow-up text-success"></i>

@@ -3603,7 +3603,7 @@ textarea.form-control.is-invalid {
 }
 
 .btn:hover {
-    color: #67748e;
+    color: #fff;
 }
 
 .btn-check:focus + .btn,
@@ -4125,7 +4125,7 @@ fieldset:disabled .btn {
 .btn-outline-success:active,
 .btn-outline-success.active,
 .btn-outline-success.dropdown-toggle.show {
-    color: #000;
+    color: #fff;
     background-color: #2dce89;
     border-color: #2dce89;
 }
@@ -4245,7 +4245,7 @@ fieldset:disabled .btn {
 .btn-outline-danger:active,
 .btn-outline-danger.active,
 .btn-outline-danger.dropdown-toggle.show {
-    color: #000;
+    color: #fff;
     background-color: #f5365c;
     border-color: #f5365c;
 }

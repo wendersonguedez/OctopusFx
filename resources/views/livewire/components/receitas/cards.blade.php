@@ -5,9 +5,9 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Valor de todas as receitas</p>
+                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Valor de todas as receitas registradas</p>
                             <h5 class="font-weight-bolder">
-                                R$ 2,300
+                                {{ (new NumberFormatter('pt_BR', NumberFormatter::CURRENCY))->format($valor_receita) }}
                             </h5>
                             <p class="mb-0">
                                 <span class="text-success text-sm font-weight-bolder">+3%</span>
@@ -30,9 +30,9 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de receitas registradas</p>
+                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Quantidade de receitas registradas</p>
                             <h5 class="font-weight-bolder">
-                                132
+                                {{ $total_receita }}
                             </h5>
                             <p class="mb-0">
                                 <span class="text-danger text-sm font-weight-bolder">-2%</span>
@@ -49,30 +49,4 @@
             </div>
         </div>
     </div>
-    {{-- <div class="col-xl-3 col-sm-6">
-        <div class="card">
-            <div class="card-body p-3">
-                <div class="row">
-                    <div class="col-8">
-                        <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Valor das despesas no mês de Maio
-                            </p>
-                            <h5 class="font-weight-bolder">
-                                $103,430
-                            </h5>
-                            <p class="mb-0">
-                                <span class="text-success text-sm font-weight-bolder">+5%</span> than last
-                                month
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                            <i class="fa fa-rocket text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 </div>

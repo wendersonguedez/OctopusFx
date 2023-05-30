@@ -3,7 +3,7 @@
     <div class="container">
         <a class="navbar-brand text-white" href="" rel="tooltip" title="Designed and Coded by Creative Tim"
             data-placement="bottom" target="_blank">
-            Wenderson Guedes
+            {{ Auth::user()->name }}
         </a>
         <div class="navbar" id="navigation">
             <ul class="navbar-nav navbar-nav-hover ms-auto">

@@ -1,9 +1,8 @@
-<!-- Navbar Dark -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3">
     <div class="container">
         <a class="navbar-brand text-white" href="" rel="tooltip" title="Designed and Coded by Creative Tim"
             data-placement="bottom" target="_blank">
-            Wenderson Guedes
+            {{ Auth::user()->name }}
         </a>
         <div class="navbar" id="navigation">
             <ul class="navbar-nav navbar-nav-hover ms-auto">
@@ -12,8 +11,10 @@
                         <i class="fa fa-list fixed-plugin-button-nav cursor-pointer fs-4"></i>
                     </a>
                 </li>
+                @auth
+                    <livewire:logout>
+                @endauth
             </ul>
         </div>
     </div>
 </nav>
-<!-- End Navbar -->

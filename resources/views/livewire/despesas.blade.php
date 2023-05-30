@@ -1,9 +1,9 @@
 <div>
     <div class="min-height-400 bg-primary position-absolute w-100 black-color-gradient"></div>
 
-    @include('livewire.components.sidebar')
+    @include('livewire.components.sidebar-despesas')
 
-    <main class="main-content position-relative border-radius-lg">
+    <main class="main-content position-relative border-radius-lg" wire:init="search">
 
         @include('livewire.components.despesas.navbar')
 
@@ -28,150 +28,71 @@
 
 @section('js')
     <script>
+        var Bar;
+        var Doughnut;
+
+        // Bar chart
+        const ctx1 = document.getElementById("line-chart");
         // Doughnut chart
-        var ctx3 = document.getElementById("doughnut-chart").getContext("2d");
+        const ctx3 = document.getElementById("doughnut-chart");
+    </script>
 
-        new Chart(ctx3, {
-            type: "doughnut",
-            data: {
-                labels: ["Mercado", "Internet", "Energia", "Água", "Roupas"],
-                datasets: [{
-                    label: "Valor",
-                    weight: 20,
-                    cutout: 60,
-                    tension: 0.9,
-                    pointRadius: 2,
-                    borderWidth: 2,
-                    backgroundColor: [
-                        "#2152ff",
-                        "#3A416F",
-                        "#f53939",
-                        "#a8b8d8",
-                        "#5e72e4"
-                    ],
-                    data: [500, 200, 700, 500, 350],
-                    // fill: false
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: true
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: "index"
-                },
-                scales: {
-                    y: {
-                        grid: {
-                            drawBorder: false,
-                            display: false,
-                            drawOnChartArea: false,
-                            drawTicks: false
-                        },
-                        ticks: {
-                            display: false
-                        }
-                    },
-                    x: {
-                        grid: {
-                            drawBorder: false,
-                            display: false,
-                            drawOnChartArea: false,
-                            drawTicks: false
-                        },
-                        ticks: {
-                            display: false
-                        }
-                    }
-                }
+    <script src="{{ asset('js/graphs/despesas/bar.js') }}"></script>
+    <script src="{{ asset('js/graphs/despesas/dough.js') }}"></script>
+
+    <script>
+        var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
         });
 
-        // Line chart
-        var ctx1 = document.getElementById("line-chart").getContext("2d");
-
-        new Chart(ctx1, {
-            type: "bar",
-            data: {
-                labels: [
-                    "Compras no mercado",
-                    "Aluguel de casa",
-                    "Saída ao cinema",
-                    "Compra de roupas",
-                    "Conta de água",
-                ],
-                datasets: [{
-                    label: "Valor",
-                    tension: 0.4,
-                    borderWidth: 0,
-                    pointRadius: 2,
-                    pointBackgroundColor: "#5e72e4",
-                    borderColor: "#5e72e4",
-                    borderWidth: 3,
-                    data: [600, 1000, 150, 400, 550],
-                    maxBarThickness: 6
-                }, ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: "index"
-                },
-                scales: {
-                    y: {
-                        grid: {
-                            drawBorder: false,
-                            display: true,
-                            drawOnChartArea: true,
-                            drawTicks: false,
-                            borderDash: [5, 5]
-                        },
-                        ticks: {
-                            display: true,
-                            padding: 10,
-                            color: "#000",
-                            font: {
-                                size: 11,
-                                family: "Open Sans",
-                                style: "normal",
-                                lineHeight: 2
-                            }
-                        }
-                    },
-                    x: {
-                        grid: {
-                            drawBorder: false,
-                            display: true,
-                            drawOnChartArea: true,
-                            drawTicks: true,
-                            borderDash: [5, 5]
-                        },
-                        ticks: {
-                            display: true,
-                            color: "#000",
-                            padding: 10,
-                            font: {
-                                size: 13,
-                                family: "Open Sans",
-                                style: "sans-serif",
-                                lineHeight: 2
-                            }
-                        }
+        function deleteMovimento(id) {
+            Swal.fire({
+                title: 'Você tem certeza?',
+                text: "Isto não pode ser revertido!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Sim!'
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    const result = await @this.delete(id);
+                    if (result) {
+                        Toast.fire({
+                            icon: 'success',
+                            title: "Despesa removida com sucesso"
+                        })
+                    } else {
+                        Toast.fire({
+                            icon: 'error',
+                            title: "Erro ao remover a despesa"
+                        })
                     }
                 }
-            }
-        });
+            })
+        };
+
+        Livewire.on('store', (message) => {
+            Toast.fire({
+                icon: 'success',
+                title: message
+            })
+        })
+
+        Livewire.on('error', (message) => {
+            Toast.fire({
+                icon: 'error',
+                title: message
+            })
+        })
     </script>
 @endsection

@@ -16,7 +16,6 @@ class Login extends Component
 
     public function login()
     {
-
         Auth::attempt(['email' => $this->login['email'], 'password' => $this->login['senha']]);
 
         if (Auth::check()) {

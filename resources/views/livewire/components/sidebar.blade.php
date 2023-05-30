@@ -1,7 +1,8 @@
 <div class="fixed-plugin">
-    <a href="#" class="px-3 py-2 d-flex icon-modal modal-icon" data-bs-toggle="modal" data-bs-target="#despesas">
+    <button class="px-3 py-2 d-flex icon-modal modal-icon"
+        onclick="Livewire.emit('openModal', 'components.modal.form-movimento')">
         <i class="fa fa-plus fs-4 text-light" aria-hidden="true"></i>
-    </a>
+    </button>
 
     <div class="card shadow-lg">
 
@@ -83,6 +84,5 @@
         .white-color {
             color: #ffffff;
         }
-
     </style>
 @endpush

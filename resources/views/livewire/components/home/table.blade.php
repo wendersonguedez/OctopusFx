@@ -19,6 +19,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($tableR as $t)
                             <tr>
                                 <td>
                                     <img src="{{ url('img/money.png') }}" class="avatar avatar-sm"
@@ -27,72 +28,27 @@
                                 <td class="align-middle text-center">
                                     <div class="d-flex align-items-center">
                                         <span
-                                            class="text-dark text-sm text-uppercase font-weight-bolder table-info">Salário</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">R$
-                                            1.200,00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span
-                                            class="text-dark text-sm text-uppercase font-weight-bolder">03/01/2022</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="{{ url('img/money.png') }}" class="avatar avatar-sm"
-                                        style="border-radius: 0px">
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span
-                                            class="text-dark text-sm text-uppercase font-weight-bolder table-info">Aluguel</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            R$ 1.600,00
+                                            class="text-dark text-sm text-uppercase font-weight-bolder table-info">
+                                            {{ $t->nome }}
                                         </span>
                                     </div>
                                 </td>
                                 <td class="align-middle text-center">
                                     <div class="d-flex align-items-center">
-                                        <span
-                                            class="text-dark text-sm text-uppercase font-weight-bolder">05/01/2022</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="{{ url('img/money.png') }}" class="avatar avatar-sm"
-                                        style="border-radius: 0px">
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span
-                                            class="text-dark text-sm text-uppercase font-weight-bolder table-info">Frete</span>
+                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
+                                            {{ (new NumberFormatter('pt_BR', NumberFormatter::CURRENCY))->format($t->valor) }}   
+                                        </span>
                                     </div>
                                 </td>
                                 <td class="align-middle text-center">
                                     <div class="d-flex align-items-center">
                                         <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            R$ 800,00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span
-                                            class="text-dark text-sm text-uppercase font-weight-bolder">20/01/2022</span>
+                                            {{ date('d/m/Y', strtotime($t->data_movimento)) }}
+                                        </span>
                                     </div>
                                 </td>
                             </tr>
-
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -118,87 +74,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <img src="{{ url('img/expense.png') }}" class="avatar avatar-sm"
-                                        style="border-radius: 0px">
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            Compras do mercado
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            R$ 600,00
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            05/01/2022
-                                        </span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="{{ url('img/expense.png') }}" class="avatar avatar-sm"
-                                        style="border-radius: 0px">
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            Internet
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            R$ 180,00
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            10/01/2022
-                                        </span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="{{ url('img/expense.png') }}" class="avatar avatar-sm"
-                                        style="border-radius: 0px">
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            Energia
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            R$ 600,00
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-dark text-sm text-uppercase font-weight-bolder">
-                                            07/01/2022
-                                        </span>
-                                    </div>
-                                </td>
-                            </tr>
+                            @foreach ($tableD as $t)
+                                <tr>
+                                    <td>
+                                        <img src="{{ url('img/expense.png') }}" class="avatar avatar-sm"
+                                            style="border-radius: 0px">
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-dark text-sm text-uppercase font-weight-bolder">
+                                                {{ $t->nome }}
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-dark text-sm text-uppercase font-weight-bolder">
+                                                {{ (new NumberFormatter('pt_BR', NumberFormatter::CURRENCY))->format($t->valor) }}
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-dark text-sm text-uppercase font-weight-bolder">
+                                                {{ date('d/m/Y', strtotime($t->data_movimento)) }}
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
 
                         </tbody>
                     </table>

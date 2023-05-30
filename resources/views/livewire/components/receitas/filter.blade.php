@@ -11,18 +11,21 @@
             <div class="col-md-3 col-sm-3 col-6">
                 <div class="form-group">
                     <label for="periodo-inicial" class="form-control-label white-color">Período inicial</label>
-                    <input class="form-control" type="date" value="2022-01-01" id="periodo-inicial">
+                    <input wire:model.defer="search.start_date" class="form-control" type="date" value="2022-01-01"
+                        id="periodo-inicial">
                 </div>
             </div>
             <div class="col-md-3 col-sm-3 col-6">
                 <div class="form-group">
                     <label for="periodo-final" class="form-control-label white-color">Período final</label>
-                    <input class="form-control" type="date" value="2022-01-31" id="periodo-final">
+                    <input wire:model.defer="search.end_date" class="form-control" type="date" value="2022-01-31"
+                        id="periodo-final">
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
-            <button type="button" class="btn bg-gradient-success" style="width: 200px">Projetar</button>
+            <button type="button" wire:click="search" class="btn bg-gradient-success"
+                style="width: 200px">Projetar</button>
         </div>
     </div>
 </div>
@@ -35,7 +38,6 @@
         }
 
         .col-4 {}
-
     </style>
 @endpush
 

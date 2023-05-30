@@ -14,11 +14,11 @@
                                     <form wire:submit.prevent="login">
                                         <div class="mb-3">
                                             <input type="email" class="form-control form-control-lg" placeholder="Email"
-                                                aria-label="Email" wire:model="login.email">
+                                                aria-label="Email" wire:model="login.email" required>
                                         </div>
                                         <div class="mb-3">
                                             <input type="password" class="form-control form-control-lg"
-                                                placeholder="Senha" aria-label="Senha" wire:model="login.senha">
+                                                placeholder="Senha" aria-label="Senha" wire:model="login.senha" required>
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">
